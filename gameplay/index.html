@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Dot-Rescue</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=1080 height=1900 style="width: 1080px; height: 1900px; background: #231F20"></canvas>
+    <script src="Build/gameplay.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/gameplay.data.unityweb",
+        frameworkUrl: "Build/gameplay.framework.js.unityweb",
+        codeUrl: "Build/gameplay.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "Dot-Rescue",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
